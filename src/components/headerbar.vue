@@ -319,11 +319,7 @@ export default {
       flag:false,
     }
   },
-  mounted:function(){
-//    alert('mounted in')
-  },
   created:function(){
-//    alert('created')
     PAGE = this;
     PAGE.logo = PAGE.logoSrc[0].logo;  //logo control
     PAGE.logo_active = PAGE.logoSrc[1].logo;
@@ -438,8 +434,6 @@ export default {
       },{
         emulateJSON:true
       }).then(function (res) {
-        console.log(res.data.resultCode+'------Code码')
-        console.log(res.data.resultMessage+'------res信息')
         if(res.data.resultCode === '20001'){
           signGoStep2Flag = false;
           $('.set_password').html(res.data.resultMessage);
@@ -1031,9 +1025,6 @@ export default {
             PAGE.showSignBackground = false;
             PAGE.showQuick = false;
           }else{
-            console.log(res.data.resultMessage+'不成功原因');
-            console.log('in third ....')
-            console.log(res.data.resultCode+'------错误码')
             if(res.data.resultCode === '1' || res.data.resultCode === '1001' || res.data.resultCode === '1002' || res.data.resultCode === '2001' || res.data.resultCode === '2002'){
               console.log('in fail')
               console.log(res.data.resultMessage);
