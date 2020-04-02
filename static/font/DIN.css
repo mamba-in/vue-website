@@ -1,0 +1,7 @@
+@font-face {
+  font-family:"DIN-Medium";
+  src: url(./DIN-Medium.ttf);
+}
+.DIN{
+  font-family:'DIN-Medium';
+}
